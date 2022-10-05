@@ -32,7 +32,7 @@ streamlit.dataframe(fruits_to_show)
 streamilt.stop()
 #New Section to display fruiyvice api response
 streamlit.header("Fruityvice Fruit Advice!")
-
+streamlit.stop()
 try:
    fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
    if not fruit_choice:
