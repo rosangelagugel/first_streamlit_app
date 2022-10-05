@@ -1,5 +1,5 @@
 #requirements.txt
 snowflake-connector-python
 cffi==1.15.0
-pyrarrow ==6.0.1
+
 
