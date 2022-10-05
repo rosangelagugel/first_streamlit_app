@@ -3,7 +3,6 @@ import pandas
 import requests
 import snowflake.connector
 from urllib.error import URLError
-
 #import streamlit
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header('Breakfast Menu')
@@ -20,7 +19,6 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
-
 #create the repeatable code block (called e function)
 def get_fruityvice_data(fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
@@ -49,6 +47,6 @@ def insert_row_snowflake(new_fruit):
          return "Thanks for adding "+ new_fruit  
 add_my_fruit = streamlit.text_input('what fruit would you like to add?')
 if streamlit.button ('Add a Fruit to the List'):
-   my_cnx =  snowflake.connector.connect(**streamlit.secrets["snowflake"])
-   back_from_function =  insert_row_snowflake(add_my_fruit)
-   streamlit.text(back_from_function)
+    my_cnx =  snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    back_from_function =  insert_row_snowflake(add_my_fruit)
+    streamlit.text(back_from_function)
