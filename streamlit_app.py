@@ -28,10 +28,10 @@ def get_fruityvice_data(fruit_choice):
     return fruityvice_normalized
 
 #New Section to display fruiyvice api response
-streamlit.header("Fruityvice Fruit Advice!")
-fruit_choice = streamlit.text_input('What fruit would you like information about?')
-back_from_function = get_fruityvice_data(fruit_choice)
-streamlit.dataframe(back_from_function)
+   streamlit.header("Fruityvice Fruit Advice!")
+   fruit_choice = streamlit.text_input('What fruit would you like information about?')
+   back_from_function = get_fruityvice_data(fruit_choice)
+   streamlit.dataframe(back_from_function)
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
