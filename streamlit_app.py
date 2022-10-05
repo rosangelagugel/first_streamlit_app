@@ -34,5 +34,6 @@ try:
    if not fruit_choice:
         streamlit.error("Please select a fruit to get information.")
    else:
-       back_from_function = get_fruityvice_data(fruit_choice)
+       streamlit.error('tesge teste Please select a fruit to get information.')
+      # back_from_function = get_fruityvice_data(fruit_choice)
       # streamlit.dataframe('back_from_function')
