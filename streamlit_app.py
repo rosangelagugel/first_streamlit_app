@@ -29,22 +29,8 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
-streamilt.stop()
 #New Section to display fruiyvice api response
 streamlit.header("Fruityvice Fruit Advice!")
 
-streamlit.stop()
-#snowflake connector
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-#my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
-#streamlit.stop()
-my_cur.execute("SELECT * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_rows)
-add_my_fruit = streamlit.text_input('What fruit would you like to add?',' ')
-streamlit.write('Thanks for adding ', add_my_fruit)
-# this will not
-#my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values('from streamlit')")
+
 
