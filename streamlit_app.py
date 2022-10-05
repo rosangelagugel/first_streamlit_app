@@ -35,4 +35,3 @@ try:
         streamlit.error("Please select a fruit to get information.")
    else:
        streamlit.dataframe(fruityvice_normalized)
-except URLError as e: 
